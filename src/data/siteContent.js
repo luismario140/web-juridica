@@ -219,7 +219,7 @@ export const siteContent = {
       name: 'Nombre completo',
       phone: 'Teléfono / WhatsApp',
       email: 'Correo electrónico',
-      service: '¿En qué podemos ayudarte?',
+      service: '¿En qué podemos ayudarte?',   
       message: 'Mensaje',
       submit: 'Continuar por WhatsApp',
       servicePlaceholder: 'Seleccione un tema',
