@@ -231,7 +231,7 @@ export const siteContent = {
       servicePlaceholder: 'Selecciona un tema',
       messagePlaceholder: 'Cuéntenos brevemente su situación',
       submissionNotice:
-        'Formulario de maqueta: no está conectado a un servicio de envío y no transmite tus datos.',
+        'Cuéntenos su situación. Le respondemos personalmente.',
       notSent:
         'El formulario no está conectado; tus datos no se han enviado. Configura primero un canal oficial de recepción.',
       privacyNote: 'Sus datos se tratan de forma confidencial.',
