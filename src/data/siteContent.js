@@ -42,9 +42,9 @@ export const siteContent = {
     profileDescription: 'Abogado experto en derecho minero-ambiental',
   },
   indicators: [
-    { value: '+10', label: 'Años en consultoría minero-ambiental' },
-    { value: '3', label: 'Frentes integrados en una estrategia' },
-    { value: '100%', label: 'Presencia en campo y territorio' },
+    { value: '[+10]+', label: 'años en consultoría minero-ambiental' },
+    { value: '[3]', label: 'frentes integrados en una estrategia' },
+    { value: '[100%]', label: 'presencia en campo y territorio' },
   ],
   capabilities: [
     '[CAPACIDAD: RELACIÓN CON COMUNIDADES]',
@@ -215,10 +215,9 @@ export const siteContent = {
       'Un especialista revisará su solicitud y le contactará para agendar una consulta estratégica. Sin compromiso y con total confidencialidad.',
     phoneLabel: 'WhatsApp / Teléfono',
     phone: '3137819046',
-    phone: '3137819046',
     emailLabel: 'Correo electrónico',
     email: 'jhonjameshurtadobussines@gmail.com',
-    email: 'jhonjameshurtadobussines@gmail.com',
+
     locationLabel: 'Ubicación',
     location: 'Chocó Colombia',
     form: {
