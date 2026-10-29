@@ -41,6 +41,15 @@
   flex: 1;
 }
 
+.route-loading {
+  display: grid;
+  min-height: 45vh;
+  place-items: center;
+  padding: 2rem;
+  color: #716b62;
+  font-size: 0.9rem;
+}
+
 @keyframes watermark-drift {
   0%,
   100% {

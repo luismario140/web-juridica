@@ -78,9 +78,15 @@ Edita `src/data/siteContent.js`. Los textos por confirmar están organizados por
 
 La portada breve está en `src/pages/Home/Home.jsx` y `src/pages/Home/Home.css`. El contenido de cada sección se distribuye en su página correspondiente. La selección de servicios y las preguntas frecuentes funcionan sin dependencias externas. El formulario solo aplica validación del navegador y avisa que no está conectado; no envía ni almacena datos.
 
+La página “Nosotros” se compone en `src/pages/About/About.jsx`; su galería compacta y la distribución responsive se ajustan en `src/pages/About/About.css`. Los textos biográficos y las descripciones de principios están en `about` dentro de `src/data/siteContent.js`.
+
 El carrusel 3D está en `src/components/HeroPortraitCarousel/`. Usa las fotografías de `src/assets/images/`, rota automáticamente, se pausa al pasar el puntero o al enfocarlo, y admite controles, teclado y arrastre horizontal con mouse o touch. Sus imágenes llevan una máscara radial que suaviza los bordes contra el fondo oscuro de las tarjetas. Para cambiar las fotos, su orden o los textos accesibles, edita `hero.portraitImages` en `src/data/siteContent.js`.
 
 La composición fotográfica de la página Territorio está en `src/pages/Territory/Territory.jsx` y sus estilos en `src/pages/Territory/Territory.css`. Las dos imágenes se importan desde `src/assets/imgterrito/`; para sustituirlas, cambia esos imports y actualiza sus textos alternativos y pies de foto. El difuminado de los bordes se aplica con gradientes visibles hacia el fondo de la página, y la animación flotante respeta la preferencia de movimiento reducido.
+
+Las tarjetas de principios en “Nosotros” tienen una elevación automática escalonada, desactivada para usuarios que prefieren movimiento reducido. El acceso flotante de WhatsApp se encuentra en `src/components/WhatsAppFloat/` y muestra una burbuja “¿Hablamos?” junto al icono.
+
+Las rutas de páginas se cargan de forma diferida desde `src/App.jsx`; así el navegador descarga cada página cuando se visita. Las fotos y los logos usados por la web tienen versiones WebP optimizadas; los originales se conservan. Las imágenes fuera de pantalla usan carga diferida y, al cambiar de ruta, la página sube al inicio de inmediato.
 
 ### Fondo general y colores
 

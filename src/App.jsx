@@ -1,12 +1,14 @@
+import { lazy } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
-import About from './pages/About/About.jsx'
-import Contact from './pages/Contact/Contact.jsx'
-import Home from './pages/Home/Home.jsx'
-import Methodology from './pages/Methodology/Methodology.jsx'
-import Faq from './pages/Faq/Faq.jsx'
-import Services from './pages/Services/Services.jsx'
-import Territory from './pages/Territory/Territory.jsx'
+
+const About = lazy(() => import('./pages/About/About.jsx'))
+const Contact = lazy(() => import('./pages/Contact/Contact.jsx'))
+const Home = lazy(() => import('./pages/Home/Home.jsx'))
+const Methodology = lazy(() => import('./pages/Methodology/Methodology.jsx'))
+const Faq = lazy(() => import('./pages/Faq/Faq.jsx'))
+const Services = lazy(() => import('./pages/Services/Services.jsx'))
+const Territory = lazy(() => import('./pages/Territory/Territory.jsx'))
 
 /**
  * Muestra una página temporal para una ruta que todavía no está implementada.

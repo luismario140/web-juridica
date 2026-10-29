@@ -59,8 +59,8 @@
 
 .landing-hero h1 {
   max-width: 620px;
-  font-size: clamp(2.7rem, 5.2vw, 4.55rem);
-  line-height: 1.03;
+  font-size: clamp(2.15rem, 3.2vw, 3.65rem);
+  line-height: 1.08;
 }
 
 .landing-hero h1 em {
@@ -224,7 +224,7 @@
 
 .landing-preview h2 {
   color: #f5f0e7;
-  font-size: clamp(1.8rem, 3.2vw, 2.55rem);
+  font-size: clamp(1.6rem, 2.7vw, 2.2rem);
   line-height: 1.15;
 }
 
@@ -294,7 +294,7 @@
   right: 1.15rem;
   color: rgba(221, 193, 132, 0.18);
   font-family: var(--font-accent);
-  font-size: 4.5rem;
+  font-size: 3.6rem;
   line-height: 1;
 }
 
@@ -302,7 +302,7 @@
   position: relative;
   max-width: 14rem;
   margin-top: 2.25rem;
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   line-height: 1.2;
 }
 
@@ -364,24 +364,24 @@
   .landing-hero {
     gap: 2.5rem;
     min-height: 0;
-    padding-block: 4rem;
+    padding-block: 3.5rem;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .landing-container {
     width: min(100% - 2rem, 540px);
   }
 
   .landing-hero {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding-block: 3.3rem 3.5rem;
+    gap: 2rem;
+    padding-block: 3rem;
   }
 
   .landing-hero h1 {
     max-width: 560px;
-    font-size: clamp(2.65rem, 12vw, 4rem);
+    font-size: clamp(2rem, 7.6vw, 2.8rem);
   }
 
   .landing-hero__description {
@@ -399,6 +399,17 @@
   }
 
   .landing-preview__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-preview-card {
+    min-height: 215px;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .landing-preview__grid {
     grid-template-columns: 1fr;
   }
 
@@ -414,6 +425,15 @@
 
   .landing-hero__location {
     font-size: 0.6rem;
+  }
+
+  .landing-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .landing-button {
+    width: 100%;
   }
 
   .landing-indicator__index {

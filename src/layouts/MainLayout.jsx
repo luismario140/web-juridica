@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import logoIcon from '../assets/logo-icon.png'
+import logoIcon from '../assets/logo-icon.webp'
 import Footer from '../components/Footer/Footer.jsx'
 import Navbar from '../components/Navbar/Navbar.jsx'
+import WhatsAppFloat from '../components/WhatsAppFloat/WhatsAppFloat.jsx'
 import './MainLayout.css'
 
 /** Mantiene navbar y footer alrededor del contenido de la ruta actual. */
@@ -10,7 +11,7 @@ function MainLayout() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }, [pathname])
 
   return (
@@ -20,9 +21,12 @@ function MainLayout() {
       </div>
       <Navbar />
       <div className="main-layout__content">
-        <Outlet />
+        <Suspense fallback={<div className="route-loading" role="status">Cargando página…</div>}>
+          <Outlet />
+        </Suspense>
       </div>
       <Footer />
+      <WhatsAppFloat />
     </div>
   )
 }

@@ -42,9 +42,9 @@ export const siteContent = {
     profileDescription: 'Abogado experto en derecho minero-ambiental',
   },
   indicators: [
-    { value: '[+10]+', label: 'años en consultoría minero-ambiental' },
-    { value: '[3]', label: 'frentes integrados en una estrategia' },
-    { value: '[100%]', label: 'presencia en campo y territorio' },
+    { value: '+10', label: 'Años en consultoría minero-ambiental' },
+    { value: '3', label: 'Frentes integrados en una estrategia' },
+    { value: '100%', label: 'Presencia en campo y territorio' },
   ],
   capabilities: [
     '[CAPACIDAD: RELACIÓN CON COMUNIDADES]',
@@ -60,9 +60,29 @@ export const siteContent = {
       'Somos una firma consultora en asuntos mineroambientales, estrategia de negocios corporativos y compliance, para quienes buscan eficiencia y tranquilidad en el desarrollo de sus operaciones.',
     secondParagraph:
       'Jhon James Hurtado Murillo es abogado experto en derecho minero-ambiental, con estudios en estrategia e innovación legal, responsabilidad del Estado, compliance y derecho de los negocios.',
-    visualLabel: '[FOTOGRAFÍA O IMAGEN INSTITUCIONAL]',
     visualNote: 'Territorio - Legalidad - Futuro',
-    principles: ['Eficacia', 'Eficiencia', 'Respeto', 'Responsabilidad'],
+    principles: [
+      {
+        id: 'eficacia',
+        title: 'Eficacia',
+        description: 'Orientar cada gestión hacia objetivos claros y resultados pertinentes para el proyecto.',
+      },
+      {
+        id: 'eficiencia',
+        title: 'Eficiencia',
+        description: 'Aprovechar de forma responsable el tiempo, los recursos y los esfuerzos disponibles.',
+      },
+      {
+        id: 'respeto',
+        title: 'Respeto',
+        description: 'Promover relaciones basadas en la escucha, el diálogo y la consideración por cada persona y comunidad.',
+      },
+      {
+        id: 'responsabilidad',
+        title: 'Responsabilidad',
+        description: 'Actuar con transparencia y atender con rigor los compromisos y alcances acordados.',
+      },
+    ],
   },
   services: {
     eyebrow: 'Líneas de servicio',
@@ -194,9 +214,9 @@ export const siteContent = {
     description:
       '[Descripción del proceso de contacto, tiempos de respuesta y manejo de información, por validar.]',
     phoneLabel: 'WhatsApp / Teléfono',
-    phone: '[NÚMERO DE CONTACTO]',
+    phone: '3137819046',
     emailLabel: 'Correo electrónico',
-    email: '[CORREO DE CONTACTO]',
+    email: 'jhonjameshurtadobussines@gmail.com',
     locationLabel: 'Ubicación',
     location: '[CIUDAD O TERRITORIO POR CONFIRMAR]',
     form: {

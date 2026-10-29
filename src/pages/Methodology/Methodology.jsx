@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import EditorialPage from '../../components/EditorialPage/EditorialPage.jsx'
 import { siteContent } from '../../data/siteContent.js'
+import recurso3 from '../../assets/imgterrito/recurso3.webp'
+import './Methodology.css'
 
 /** Explica en cuatro etapas el proceso de acompañamiento propuesto. */
 function Methodology() {
@@ -21,6 +23,26 @@ function Methodology() {
           ))}
         </div>
       </section>
+
+      <section className="methodology-differential" aria-labelledby="methodology-differential-title">
+        <div className="methodology-differential__media">
+          <img
+            src={recurso3}
+            alt="Territorio y trabajo de campo"
+            width="1320"
+            height="838"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="methodology-differential__overlay" aria-hidden="true" />
+        </div>
+        <div className="methodology-differential__content">
+          <p className="editorial-eyebrow"><span />{siteContent.differentiator.eyebrow}</p>
+          <h2 id="methodology-differential-title">{siteContent.differentiator.title}</h2>
+          <p>{siteContent.differentiator.description}</p>
+        </div>
+      </section>
+
       <aside className="editorial-callout editorial-section">
         <p className="editorial-eyebrow"><span />Un siguiente paso claro</p>
         <h2>Cuéntanos en qué etapa está tu proyecto.</h2>

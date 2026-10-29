@@ -1,7 +1,7 @@
 import EditorialPage from '../../components/EditorialPage/EditorialPage.jsx'
 import { siteContent } from '../../data/siteContent.js'
-import fieldworkImageOne from '../../assets/imgterrito/recurso3.jpg'
-import fieldworkImageTwo from '../../assets/imgterrito/recurso7.jpg'
+import fieldworkImageOne from '../../assets/imgterrito/recurso3.webp'
+import fieldworkImageTwo from '../../assets/imgterrito/recurso7.webp'
 import './Territory.css'
 
 /** Reúne el enfoque territorial y los públicos de la firma. */
@@ -18,6 +18,8 @@ function Territory() {
             <img
               src={fieldworkImageOne}
               alt="Dos personas revisan una batea en un cauce de agua."
+              width="1320"
+              height="838"
               loading="lazy"
               decoding="async"
             />
@@ -27,6 +29,8 @@ function Territory() {
             <img
               src={fieldworkImageTwo}
               alt="Un profesional y un acompañante observan una batea en el cauce."
+              width="1320"
+              height="852"
               loading="lazy"
               decoding="async"
             />

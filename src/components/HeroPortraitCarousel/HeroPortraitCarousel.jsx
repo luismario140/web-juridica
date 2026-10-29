@@ -186,7 +186,15 @@ function HeroPortraitCarousel({ slides, profileName, profileDescription }) {
                 setActiveSlide(face)
               }}
             >
-              <img src={face.src} alt="" draggable="false" />
+              <img
+                src={face.src}
+                alt=""
+                sizes="(max-width: 680px) 85vw, 40vw"
+                loading={face.faceIndex < slides.length ? 'eager' : 'lazy'}
+                fetchPriority={face.faceIndex === 0 ? 'high' : 'auto'}
+                decoding="async"
+                draggable="false"
+              />
             </motion.button>
           ))}
         </motion.div>
