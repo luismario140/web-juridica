@@ -1,0 +1,285 @@
+.hero-portrait {
+  position: relative;
+  min-width: 0;
+  padding: 1.15rem 0 0.85rem;
+  outline: none;
+}
+
+.hero-portrait::before {
+  position: absolute;
+  z-index: 0;
+  top: 8%;
+  right: 7%;
+  width: 72%;
+  height: 73%;
+  border: 1px solid rgba(188, 139, 47, 0.22);
+  border-radius: 48% 48% 18% 18%;
+  content: '';
+  transform: rotate(7deg);
+}
+
+.hero-portrait__stage {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: clamp(330px, 38vw, 450px);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1050px;
+  perspective-origin: 50% 48%;
+  touch-action: pan-y;
+}
+
+.hero-portrait__cylinder {
+  position: relative;
+  height: 100%;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-portrait__cylinder:active {
+  cursor: grabbing;
+}
+
+.hero-portrait__face {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(188, 139, 47, 0.42);
+  border-radius: 0.85rem;
+  background: #211f1b;
+  box-shadow: 0 24px 48px rgba(32, 27, 19, 0.28);
+  cursor: inherit;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-origin: center center;
+}
+
+.hero-portrait__face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-portrait__profile {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 3.8rem;
+  display: flex;
+  max-width: min(80%, 280px);
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(221, 210, 192, 0.8);
+  border-radius: 0.8rem;
+  background: rgba(248, 244, 236, 0.87);
+  box-shadow: 0 10px 24px rgba(48, 39, 23, 0.09);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.hero-portrait__seal {
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(188, 139, 47, 0.45);
+  border-radius: 50%;
+  color: #80602a;
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+}
+
+.hero-portrait__profile strong,
+.hero-portrait__profile small {
+  display: block;
+}
+
+.hero-portrait__profile strong {
+  overflow: hidden;
+  color: #302b23;
+  font-size: 0.69rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hero-portrait__profile small {
+  margin-top: 0.22rem;
+  color: #716b62;
+  font-size: 0.58rem;
+  line-height: 1.4;
+}
+
+.hero-portrait__controls {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0.45rem auto 0;
+}
+
+.hero-portrait__controls > button {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  place-items: center;
+  border: 1px solid #d5c9b5;
+  border-radius: 50%;
+  background: rgba(248, 244, 236, 0.8);
+  color: #574a34;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.hero-portrait__controls > button:hover {
+  transform: translateY(-1px);
+  border-color: #bc8b2f;
+  background: #f8f4ec;
+}
+
+.hero-portrait__controls button:focus-visible,
+.hero-portrait__face:focus-visible,
+.hero-portrait__lightbox-close:focus-visible,
+.hero-portrait:focus-visible {
+  outline: 2px solid #9a712b;
+  outline-offset: 3px;
+}
+
+.hero-portrait__pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.hero-portrait__pagination button {
+  width: 0.38rem;
+  height: 0.38rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #c9bda9;
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.hero-portrait__pagination button.is-active {
+  width: 1.1rem;
+  background: #98712d;
+}
+
+.hero-portrait__counter {
+  position: absolute;
+  right: 0.3rem;
+  bottom: 1.55rem;
+  color: #8d7a59;
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-portrait__status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.hero-portrait__lightbox {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 5vw, 4rem);
+  background: rgba(24, 21, 17, 0.82);
+  cursor: zoom-out;
+}
+
+.hero-portrait__lightbox img {
+  display: block;
+  max-width: min(100%, 980px);
+  max-height: 86vh;
+  border: 1px solid rgba(248, 244, 236, 0.65);
+  border-radius: 1rem;
+  object-fit: contain;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.hero-portrait__lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgba(248, 244, 236, 0.55);
+  border-radius: 50%;
+  background: rgba(248, 244, 236, 0.12);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 680px) {
+  .hero-portrait {
+    padding-top: 0;
+  }
+
+  .hero-portrait::before {
+    right: 11%;
+    width: 77%;
+  }
+
+  .hero-portrait__stage {
+    height: clamp(300px, 86vw, 390px);
+    perspective: 900px;
+  }
+
+  .hero-portrait__profile {
+    right: 0.25rem;
+    bottom: 3.7rem;
+    max-width: min(78%, 250px);
+    padding: 0.55rem 0.7rem;
+  }
+
+  .hero-portrait__seal {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .hero-portrait__counter {
+    right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-portrait__controls > button,
+  .hero-portrait__pagination button {
+    transition: none;
+  }
+}

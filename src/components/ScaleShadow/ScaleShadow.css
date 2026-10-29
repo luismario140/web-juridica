@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Ilustración de balanza decorativa y sus variantes visuales.
+   ========================================================================== */
+
+.scale-shadow {
+  position: absolute;
+  width: var(--scale-size, 400px);
+  height: var(--scale-size, 400px);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  transform: rotate(var(--scale-tilt, 0deg));
+  transform-origin: center center;
+  transition: opacity 0.4s ease;
+}
+
+.scale-shadow__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* --------------------------------------------------------------------------
+   VARIANTES DE COLOR Y RESPLANDOR
+   -------------------------------------------------------------------------- */
+
+.scale-shadow--gold {
+  color: rgba(193, 148, 48, 0.08);
+  filter: drop-shadow(0 10px 28px rgba(193, 148, 48, 0.1));
+}
+
+.scale-shadow--light {
+  color: rgba(20, 20, 20, 0.045);
+  filter: drop-shadow(0 8px 24px rgba(20, 20, 20, 0.05));
+}
+
+.scale-shadow--dark {
+  color: rgba(193, 148, 48, 0.11);
+  filter: drop-shadow(0 0 35px rgba(193, 148, 48, 0.16));
+}
+
+/* --------------------------------------------------------------------------
+   ANIMACIONES SUTILES DE FLOTACIÓN
+   -------------------------------------------------------------------------- */
+
+.scale-shadow--animated {
+  animation: scaleShadowFloat 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.scale-shadow--animated-reverse {
+  animation: scaleShadowFloatReverse 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes scaleShadowFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--scale-tilt, 0deg));
+  }
+  50% {
+    transform: translateY(-12px) rotate(calc(var(--scale-tilt, 0deg) + 1.6deg));
+  }
+}
+
+@keyframes scaleShadowFloatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--scale-tilt, 0deg));
+  }
+  50% {
+    transform: translateY(12px) rotate(calc(var(--scale-tilt, 0deg) - 1.6deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scale-shadow--animated,
+  .scale-shadow--animated-reverse {
+    animation: none !important;
+  }
+}
