@@ -140,85 +140,87 @@ export const siteContent = {
   },
   methodology: {
     eyebrow: 'Cómo trabajamos',
-    title: '[TÍTULO SOBRE EL PROCESO DE TRABAJO]',
+    title: 'Del diagnóstico a la operación responsable.',
     description:
-      '[Explicación breve de cómo se acompaña al cliente desde el primer contacto.]',
+      'Un proceso claro, con un solo equipo a su lado de principio a fin. Usted sabe siempre en qué punto está su proyecto.',
     steps: [
       {
         title: 'Diagnóstico',
-        description: '[Descripción del análisis inicial y la información necesaria.]',
+        description: 'Escuchamos su caso y evaluamos la situación legal, técnica y ambiental de su proyecto.',
       },
       {
         title: 'Estrategia',
-        description: '[Descripción de la ruta de trabajo que se acuerde.]',
+        description: 'Definimos una ruta clara, con prioridades, tiempos y riesgos identificados.',
       },
       {
         title: 'Gestión',
-        description: '[Descripción de las actividades y responsabilidades acordadas.]',
+        description: 'Radicamos, tramitamos y le representamos ante las autoridades competentes.',
       },
       {
         title: 'Acompañamiento',
-        description: '[Descripción del seguimiento y la comunicación con el cliente.]',
+        description: 'Seguimos a su lado en la operación, el cumplimiento y la relación con el entorno.',
       },
     ],
   },
   differentiator: {
     eyebrow: 'Nuestro diferencial',
-    title: '[FRASE CENTRAL SOBRE LA PROPUESTA DE VALOR]',
+    title: 'Conocemos el territorio porque trabajamos en él.',
     description:
-      '[Descripción verificable del enfoque, la experiencia o la metodología de la firma.]',
+      'Derecho minero-ambiental, estrategia corporativa, compliance y presencia en campo. Escuchamos a las comunidades y a los mineros del Chocó para construir soluciones que funcionan en la realidad, no solo en el papel.',
   },
   audience: {
     eyebrow: 'A quién acompañamos',
-    title: '[TÍTULO PARA LOS PÚBLICOS DE LA FIRMA]',
+    title: 'Si su operación está regulada, podemos ayudarle.',
     items: [
       {
-        title: '[EMPRESAS MINERAS Y TITULARES]',
-        description: '[Descripción del público y sus posibles necesidades.]',
+        title: 'EMPRESAS MINERAS Y TITULARES',
+        description: 'Operadores de proyectos extractivos, empresas junior y en exploración.',
       },
       {
-        title: '[ORGANIZACIONES E INSTITUCIONES]',
-        description: '[Descripción del público y sus posibles necesidades.]',
+        title: 'ORGANIZACIONES E INSTITUCIONES',
+        description: 'Gremios, asociaciones, entes reguladores y descentralizados.',
       },
       {
-        title: '[CORPORACIONES Y OPERADORES]',
-        description: '[Descripción del público y sus posibles necesidades.]',
+        title: 'CORPORACIONES Y OPERADORES',
+        description: 'Empresas con divisiones minero-ambientales y operaciones reguladas.',
       },
     ],
   },
   faq: {
     eyebrow: 'Preguntas frecuentes',
-    title: '[TÍTULO PARA LAS PREGUNTAS FRECUENTES]',
+    title: 'Resolvemos sus dudas antes de empezar.',
     items: [
       {
-        question: '¿Qué información conviene preparar antes de una consulta?',
-        answer: '[Respuesta provisional que la firma debe revisar y aprobar.]',
+        question: 'Mi actividad minera aún es informal ¿Pueden ayudarme?',
+        answer: 'Sí. Acompañamos la regularización de la actividad minera desde el diagnóstico inicial hasta la operación responsable, incluyendo la recuperación de las áreas intervenidas.',
       },
       {
-        question: '¿Con qué tipo de organizaciones trabaja la firma?',
-        answer: '[Respuesta provisional que la firma debe revisar y aprobar.]',
+        question: '¿Trabajan solo con grandes empresas?',
+        answer: 'No. Acompañamos a titulares mineros, empresas junior y en exploración, gremios, asociaciones y corporaciones con divisiones minero-ambientales. Cada caso se atiende según su realidad.',
       },
       {
-        question: '¿Cómo se define el alcance de un servicio?',
-        answer: '[Respuesta provisional que la firma debe revisar y aprobar.]',
+        question: '¿Qué pasa en la primera consulta estratégica?',
+        answer: 'Escuchamos su situación, revisamos la documentación disponible y le explicamos con claridad los riesgos, las opciones y la ruta recomendada para su proyecto.',
       },
       {
-        question: '¿Cómo se aborda una consulta relacionada con el territorio?',
-        answer: '[Respuesta provisional que la firma debe revisar y aprobar.]',
+        question: '¿Cómo manejan las relaciones con las comunidades?',
+        answer: 'Integramos la relación con el entorno social en la estrategia desde el inicio, con respeto, diálogo y un enfoque de sostenibilidad que protege la operación y el territorio.',
       },
     ],
   },
   contact: {
     eyebrow: 'Contacto',
-    title: '[INVITACIÓN A CONTAR EL CASO O PROYECTO]',
+    title: 'Cuéntenos su situación. Le respondemos personalmente.',
     description:
-      '[Descripción del proceso de contacto, tiempos de respuesta y manejo de información, por validar.]',
+      'Un especialista revisará su solicitud y le contactará para agendar una consulta estratégica. Sin compromiso y con total confidencialidad.',
     phoneLabel: 'WhatsApp / Teléfono',
+    phone: '3137819046',
     phone: '3137819046',
     emailLabel: 'Correo electrónico',
     email: 'jhonjameshurtadobussines@gmail.com',
+    email: 'jhonjameshurtadobussines@gmail.com',
     locationLabel: 'Ubicación',
-    location: '[CIUDAD O TERRITORIO POR CONFIRMAR]',
+    location: 'Chocó Colombia',
     form: {
       name: 'Nombre completo',
       phone: 'Teléfono / WhatsApp',
@@ -227,12 +229,12 @@ export const siteContent = {
       message: 'Mensaje',
       submit: 'Validar formulario',
       servicePlaceholder: 'Selecciona un tema',
-      messagePlaceholder: '[DESCRIBE BREVEMENTE TU CONSULTA]',
+      messagePlaceholder: 'Cuéntenos brevemente su situación',
       submissionNotice:
         'Formulario de maqueta: no está conectado a un servicio de envío y no transmite tus datos.',
       notSent:
         'El formulario no está conectado; tus datos no se han enviado. Configura primero un canal oficial de recepción.',
-      privacyNote: '[AVISO DE PRIVACIDAD Y TRATAMIENTO DE DATOS POR VALIDAR]',
+      privacyNote: 'Sus datos se tratan de forma confidencial.',
     },
   },
 }
