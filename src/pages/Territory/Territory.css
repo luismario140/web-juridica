@@ -1,0 +1,148 @@
+.territory-split {
+  align-items: start;
+}
+
+.territory-gallery {
+  position: relative;
+  min-width: 0;
+  min-height: 430px;
+  isolation: isolate;
+}
+
+.territory-gallery::before {
+  position: absolute;
+  z-index: -1;
+  inset: 9% 8% 7% 3%;
+  border: 1px solid rgba(188, 139, 47, 0.32);
+  border-radius: 48% 48% 14px 14px;
+  content: '';
+  transform: rotate(-5deg);
+}
+
+.territory-photo {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  background: #f0e9dd;
+  filter: drop-shadow(0 18px 24px rgba(46, 37, 22, 0.18));
+  animation: territory-photo-drift 8s ease-in-out infinite;
+}
+
+.territory-photo::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      #f0e9dd 0%,
+      rgba(240, 233, 221, 0.82) 5%,
+      rgba(240, 233, 221, 0.38) 14%,
+      transparent 30%,
+      transparent 70%,
+      rgba(240, 233, 221, 0.38) 86%,
+      rgba(240, 233, 221, 0.82) 95%,
+      #f0e9dd 100%
+    ),
+    linear-gradient(
+      to bottom,
+      #f0e9dd 0%,
+      rgba(240, 233, 221, 0.8) 5%,
+      rgba(240, 233, 221, 0.3) 14%,
+      transparent 30%,
+      transparent 70%,
+      rgba(240, 233, 221, 0.3) 86%,
+      rgba(240, 233, 221, 0.8) 95%,
+      #f0e9dd 100%
+    );
+  content: '';
+  pointer-events: none;
+}
+
+.territory-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.territory-photo--primary {
+  top: 0;
+  left: 0;
+  width: 83%;
+  height: 77%;
+  border-radius: 46% 46% 12px 12px;
+}
+
+.territory-photo--primary img {
+  object-position: center 54%;
+}
+
+.territory-photo--secondary {
+  right: 0;
+  bottom: 1%;
+  width: 65%;
+  height: 55%;
+  border: 5px solid #f0e9dd;
+  border-radius: 12px;
+  animation-delay: -3.2s;
+}
+
+.territory-photo--secondary img {
+  object-position: center 45%;
+}
+
+.territory-photo figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  max-width: calc(100% - 1.7rem);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(248, 244, 236, 0.45);
+  border-radius: 999px;
+  background: rgba(32, 29, 24, 0.72);
+  color: #fffaf0;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes territory-photo-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@media (max-width: 800px) {
+  .territory-gallery {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 620px) {
+  .territory-gallery {
+    min-height: clamp(330px, 88vw, 430px);
+  }
+
+  .territory-photo--primary {
+    width: 88%;
+    height: 76%;
+  }
+
+  .territory-photo--secondary {
+    width: 67%;
+    height: 53%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .territory-photo {
+    animation: none;
+  }
+}

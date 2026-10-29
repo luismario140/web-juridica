@@ -78,7 +78,9 @@ Edita `src/data/siteContent.js`. Los textos por confirmar están organizados por
 
 La portada breve está en `src/pages/Home/Home.jsx` y `src/pages/Home/Home.css`. El contenido de cada sección se distribuye en su página correspondiente. La selección de servicios y las preguntas frecuentes funcionan sin dependencias externas. El formulario solo aplica validación del navegador y avisa que no está conectado; no envía ni almacena datos.
 
-El carrusel 3D está en `src/components/HeroPortraitCarousel/`. Usa las fotografías de `src/assets/images/`, rota automáticamente, se pausa al pasar el puntero o al enfocarlo, y admite controles, teclado y arrastre horizontal con mouse o touch. Para cambiar el orden, añadir fotos o corregir sus textos accesibles, edita `hero.portraitImages` en `src/data/siteContent.js`.
+El carrusel 3D está en `src/components/HeroPortraitCarousel/`. Usa las fotografías de `src/assets/images/`, rota automáticamente, se pausa al pasar el puntero o al enfocarlo, y admite controles, teclado y arrastre horizontal con mouse o touch. Sus imágenes llevan una máscara radial que suaviza los bordes contra el fondo oscuro de las tarjetas. Para cambiar las fotos, su orden o los textos accesibles, edita `hero.portraitImages` en `src/data/siteContent.js`.
+
+La composición fotográfica de la página Territorio está en `src/pages/Territory/Territory.jsx` y sus estilos en `src/pages/Territory/Territory.css`. Las dos imágenes se importan desde `src/assets/imgterrito/`; para sustituirlas, cambia esos imports y actualiza sus textos alternativos y pies de foto. El difuminado de los bordes se aplica con gradientes visibles hacia el fondo de la página, y la animación flotante respeta la preferencia de movimiento reducido.
 
 ### Fondo general y colores
 

@@ -1,5 +1,8 @@
 import EditorialPage from '../../components/EditorialPage/EditorialPage.jsx'
 import { siteContent } from '../../data/siteContent.js'
+import fieldworkImageOne from '../../assets/imgterrito/recurso3.jpg'
+import fieldworkImageTwo from '../../assets/imgterrito/recurso7.jpg'
+import './Territory.css'
 
 /** Reúne el enfoque territorial y los públicos de la firma. */
 function Territory() {
@@ -9,9 +12,26 @@ function Territory() {
       title={siteContent.differentiator.title}
       description={siteContent.differentiator.description}
     >
-      <section className="editorial-split" aria-label="Presencia y conocimiento del territorio">
-        <div className="editorial-visual">
-          <span>{siteContent.differentiator.visualLabel}</span>
+      <section className="editorial-split territory-split" aria-label="Presencia y conocimiento del territorio">
+        <div className="territory-gallery" aria-label="Imágenes de trabajo en territorio">
+          <figure className="territory-photo territory-photo--primary">
+            <img
+              src={fieldworkImageOne}
+              alt="Dos personas revisan una batea en un cauce de agua."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Trabajo de campo</figcaption>
+          </figure>
+          <figure className="territory-photo territory-photo--secondary">
+            <img
+              src={fieldworkImageTwo}
+              alt="Un profesional y un acompañante observan una batea en el cauce."
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Reconocimiento del entorno</figcaption>
+          </figure>
         </div>
         <div className="editorial-copy">
           <p className="editorial-eyebrow"><span />Territorio</p>

@@ -145,7 +145,6 @@ export const siteContent = {
     title: '[FRASE CENTRAL SOBRE LA PROPUESTA DE VALOR]',
     description:
       '[Descripción verificable del enfoque, la experiencia o la metodología de la firma.]',
-    visualLabel: '[IMAGEN DE TERRITORIO O TRABAJO DE CAMPO]',
   },
   audience: {
     eyebrow: 'A quién acompañamos',
