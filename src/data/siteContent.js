@@ -1,8 +1,8 @@
 import professionalOfficePortrait from '../assets/images/recurso1.webp'
 import professionalCorporatePortrait from '../assets/images/recurso2.webp'
-import legalMiningImage from '../assets/services/legal-minero.svg'
-import corporateStrategyImage from '../assets/services/estrategia-corporativa.svg'
-import complianceImage from '../assets/services/compliance.svg'
+import legalMiningImage from '../assets/images/recurso7.jpeg'
+import corporateStrategyImage from '../assets/images/recurso8.jpeg'
+import complianceImage from '../assets/images/recurso9.jpeg'
 
 // Contenido editorial compartido por las páginas del sitio.
 export const siteContent = {
@@ -85,7 +85,6 @@ export const siteContent = {
         id: 'legal-minero',
         title: 'Legal minero-ambiental',
         image: legalMiningImage,
-        imageAlt: 'Ilustración editorial de un mapa de territorio y un expediente minero-ambiental.',
         summary: 'Formalización, permisos y representación especializada.',
         description:
           'Representación técnico-jurídica ante autoridades mineras y ambientales, para que su operación esté en regla y protegida.',
@@ -103,7 +102,6 @@ export const siteContent = {
         id: 'estrategia',
         title: 'Estrategia corporativa',
         image: corporateStrategyImage,
-        imageAlt: 'Ilustración editorial de edificios y una ruta de planificación empresarial.',
         summary: 'Estructura, negociación y planificación empresarial.',
         description:
           'Estructuramos y fortalecemos su empresa para negociar, crecer y operar con solidez.',
@@ -121,7 +119,6 @@ export const siteContent = {
         id: 'compliance',
         title: 'Compliance',
         image: complianceImage,
-        imageAlt: 'Ilustración editorial de un escudo y una lista de controles de cumplimiento.',
         summary: 'Prevención de riesgos y fortalecimiento de controles.',
         description:
           'Sistemas de prevención y transparencia que generan confianza ante clientes, aliados y autoridades.',

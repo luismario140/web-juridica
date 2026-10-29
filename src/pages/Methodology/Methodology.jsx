@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import EditorialPage from '../../components/EditorialPage/EditorialPage.jsx'
 import { siteContent } from '../../data/siteContent.js'
+import differentiatorImage from '../../assets/imgterrito/recurso3.webp'
+import './Methodology.css'
 
 /** Explica en cuatro etapas el proceso de acompañamiento propuesto. */
 function Methodology() {
@@ -37,7 +39,23 @@ function Methodology() {
           ))}
         </div>
       </section>
-
+      <section
+        className="editorial-section methodology-differentiator"
+        aria-labelledby="methodology-differentiator-title"
+      >
+        <img
+          className="methodology-differentiator__image"
+          src={differentiatorImage}
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="methodology-differentiator__content">
+          <p className="editorial-eyebrow"><span />{siteContent.differentiator.eyebrow}</p>
+          <h2 id="methodology-differentiator-title">{siteContent.differentiator.title}</h2>
+          <p>{siteContent.differentiator.description}</p>
+        </div>
+      </section>
     </EditorialPage>
   )
 }

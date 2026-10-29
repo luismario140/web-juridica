@@ -1,0 +1,89 @@
+.methodology-differentiator {
+  position: relative;
+  display: grid;
+  min-height: 340px;
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 4rem);
+  border: 1px solid rgba(188, 139, 47, 0.3);
+  border-radius: 18px;
+  isolation: isolate;
+  background: #282720;
+}
+
+.methodology-differentiator::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(28, 29, 24, 0.9), rgba(28, 29, 24, 0.58) 62%, rgba(28, 29, 24, 0.22)),
+    linear-gradient(0deg, rgba(28, 29, 24, 0.32), transparent);
+  content: '';
+}
+
+.methodology-differentiator__image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: methodology-background-drift 18s ease-in-out infinite alternate;
+}
+
+.methodology-differentiator__content {
+  max-width: 700px;
+  color: #f8f4ec;
+}
+
+.methodology-differentiator .editorial-eyebrow {
+  color: #e4be6c;
+}
+
+.methodology-differentiator .editorial-eyebrow > span {
+  background: #d3a443;
+}
+
+.methodology-differentiator h2 {
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.methodology-differentiator__content > p:last-child {
+  max-width: 620px;
+  margin: 1rem 0 0;
+  color: rgba(248, 244, 236, 0.82);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+@keyframes methodology-background-drift {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 620px) {
+  .methodology-differentiator {
+    min-height: 390px;
+    padding: 1.5rem;
+  }
+
+  .methodology-differentiator::after {
+    background: rgba(28, 29, 24, 0.68);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .methodology-differentiator__image {
+    animation: none;
+  }
+}

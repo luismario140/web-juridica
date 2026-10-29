@@ -64,20 +64,6 @@
 }
 
 .territory-photo--primary img {
-  object-position: center 54%;
-}
-
-.territory-photo--secondary {
-  right: 0;
-  bottom: 1%;
-  width: 65%;
-  height: 55%;
-  border: 5px solid #f0e9dd;
-  border-radius: 12px;
-  animation-delay: -3.2s;
-}
-
-.territory-photo--secondary img {
   object-position: center 45%;
 }
 
@@ -122,12 +108,7 @@
 
   .territory-photo--primary {
     width: 88%;
-    height: 76%;
-  }
-
-  .territory-photo--secondary {
-    width: 67%;
-    height: 53%;
+    height: 82%;
   }
 }
 

@@ -1,8 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import EditorialPage from '../../components/EditorialPage/EditorialPage.jsx'
 import { siteContent } from '../../data/siteContent.js'
-import fieldworkImageOne from '../../assets/imgterrito/recurso3.webp'
-import fieldworkImageTwo from '../../assets/imgterrito/recurso7.webp'
+import fieldworkImage from '../../assets/imgterrito/recurso7.webp'
 import './Territory.css'
 
 /** Reúne el enfoque territorial y los públicos de la firma. */
@@ -19,18 +18,7 @@ function Territory() {
         <div className="territory-gallery" aria-label="Imágenes de trabajo en territorio">
           <figure className="territory-photo territory-photo--primary">
             <img
-              src={fieldworkImageOne}
-              alt="Dos personas revisan una batea en un cauce de agua."
-              width="1320"
-              height="838"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption>Trabajo de campo</figcaption>
-          </figure>
-          <figure className="territory-photo territory-photo--secondary">
-            <img
-              src={fieldworkImageTwo}
+              src={fieldworkImage}
               alt="Un profesional y un acompañante observan una batea en el cauce."
               width="1320"
               height="852"
