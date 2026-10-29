@@ -23,7 +23,16 @@ function Services() {
               aria-pressed={index === activeIndex}
               onClick={() => setActiveIndex(index)}
             >
-              <span>0{index + 1}</span>{service.title}
+              <span className="editorial-service-tab__content">
+                <span className="editorial-service-tab__heading">
+                  <span className="editorial-service-tab__index">0{index + 1}</span>
+                  <strong>{service.title}</strong>
+                </span>
+                <small>{service.summary}</small>
+                <span className="editorial-service-tab__action">
+                  {index === activeIndex ? 'Seleccionado' : 'Ver línea'}
+                </span>
+              </span>
             </button>
           ))}
         </div>
@@ -33,12 +42,14 @@ function Services() {
             <p className="editorial-eyebrow"><span />Línea 0{activeIndex + 1}</p>
             <h2>{activeService.title}</h2>
             <p>{activeService.description}</p>
-            <ul>
+            <ul className="editorial-service-detail__list">
               {activeService.items.map((item, index) => (
                 <li key={`${activeService.id}-${index}`}>{item}</li>
               ))}
             </ul>
-            <p>{activeService.tags.join(' · ')}</p>
+            <ul className="editorial-service-tags" aria-label="Temas relacionados">
+              {activeService.tags.map((tag) => <li key={tag}>{tag}</li>)}
+            </ul>
             <Link className="editorial-link" to="/contacto">
               {siteContent.services.action}
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
@@ -47,6 +58,7 @@ function Services() {
             </Link>
           </div>
           <div className="editorial-service-detail__visual">
+            <img src={activeService.image} alt="" aria-hidden="true" />
             <span>{activeService.visualLabel}</span>
           </div>
         </article>

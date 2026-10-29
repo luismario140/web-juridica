@@ -1,8 +1,10 @@
 import professionalOfficePortrait from '../assets/images/recurso1.webp'
 import professionalCorporatePortrait from '../assets/images/recurso2.webp'
+import legalMiningImage from '../assets/services/legal-minero.svg'
+import corporateStrategyImage from '../assets/services/estrategia-corporativa.svg'
+import complianceImage from '../assets/services/compliance.svg'
 
-// Textos provisionales de la maqueta. Sustituirlos aquí cuando el cliente valide
-// el contenido definitivo; los campos entre corchetes son datos aún pendientes.
+// Contenido editorial compartido por las páginas del sitio.
 export const siteContent = {
   brand: {
     name: 'Jhon James Hurtado M.',
@@ -23,7 +25,7 @@ export const siteContent = {
     title: 'Criterio legal y visión estratégica para su proyecto minero',
     emphasizedTitle: 'avance con seguridad',
     description:
-      'Acompañamos a titulares mineros, empresas y comunidades en la formalización, el licenciamiento ambiental y el cumplimiento normativo, con cercanía y conocimiento real del territorio.',
+      'Asesoría jurídica y estratégica para titulares mineros, empresas y organizaciones que buscan gestionar sus proyectos con claridad normativa y una lectura cercana del territorio.',
     primaryAction: 'Solicitar consulta',
     secondaryAction: 'Conocer servicios',
     portraitImages: [
@@ -41,23 +43,11 @@ export const siteContent = {
     profileName: 'Jhon James Hurtado Murillo',
     profileDescription: 'Abogado experto en derecho minero-ambiental',
   },
-  indicators: [
-    { value: '+10', label: 'Años en consultoría minero-ambiental' },
-    { value: '3', label: 'Frentes integrados en una estrategia' },
-    { value: '100%', label: 'Presencia en campo y territorio' },
-  ],
-  capabilities: [
-    '[CAPACIDAD: RELACIÓN CON COMUNIDADES]',
-    '[CAPACIDAD: ESTRUCTURACIÓN CORPORATIVA]',
-    '[CAPACIDAD: DEBIDA DILIGENCIA]',
-    '[CAPACIDAD: GESTIÓN AMBIENTAL]',
-    '[CAPACIDAD: OPTIMIZACIÓN DE PROCESOS]',
-  ],
   about: {
     eyebrow: 'Quiénes somos',
     title: 'Un aliado que entiende la ley, el negocio y la gente del territorio.',
     description:
-      'Somos una firma consultora en asuntos mineroambientales, estrategia de negocios corporativos y compliance, para quienes buscan eficiencia y tranquilidad en el desarrollo de sus operaciones.',
+      'Integramos asesoría minero-ambiental, estrategia corporativa y compliance para acompañar decisiones jurídicas y empresariales a lo largo de cada proyecto.',
     secondParagraph:
       'Jhon James Hurtado Murillo es abogado experto en derecho minero-ambiental, con estudios en estrategia e innovación legal, responsabilidad del Estado, compliance y derecho de los negocios.',
     visualNote: 'Territorio - Legalidad - Futuro',
@@ -88,12 +78,15 @@ export const siteContent = {
     eyebrow: 'Líneas de servicio',
     title: 'Tres frentes, una sola estrategia.',
     description:
-      'Elija un frente para ver cómo le acompañamos. Cada proyecto se aborda desde una mirada completa: legal, técnica, empresarial, ambiental y reputacional.',
+      'Explore las áreas de asesoría y sus principales alcances. El acompañamiento se define según las necesidades, los antecedentes y los objetivos de cada proyecto.',
     action: 'Hablar sobre este servicio',
     items: [
       {
         id: 'legal-minero',
         title: 'Legal minero-ambiental',
+        image: legalMiningImage,
+        imageAlt: 'Ilustración editorial de un mapa de territorio y un expediente minero-ambiental.',
+        summary: 'Formalización, permisos y representación especializada.',
         description:
           'Representación técnico-jurídica ante autoridades mineras y ambientales, para que su operación esté en regla y protegida.',
         items: [
@@ -104,11 +97,14 @@ export const siteContent = {
           'Representación ante autoridades mineras y ambientales',
         ],
         tags: ['TÍTULOS', 'LICENCIAS', 'CUMPLIMIENTO'],
-        visualLabel: '[IMAGEN RELACIONADA CON EL SERVICIO]',
+        visualLabel: 'Seguridad jurídica para su operación',
       },
       {
         id: 'estrategia',
         title: 'Estrategia corporativa',
+        image: corporateStrategyImage,
+        imageAlt: 'Ilustración editorial de edificios y una ruta de planificación empresarial.',
+        summary: 'Estructura, negociación y planificación empresarial.',
         description:
           'Estructuramos y fortalecemos su empresa para negociar, crecer y operar con solidez.',
         items: [
@@ -119,11 +115,14 @@ export const siteContent = {
           'Asistencia técnico-jurídica en procesos corporativos',
         ],
         tags: ['ESTRUCTURA', 'NEGOCIACIÓN', 'GOBERNANZA'],
-        visualLabel: '[IMAGEN RELACIONADA CON EL SERVICIO]',
+        visualLabel: 'Estructura y decisiones de negocio',
       },
       {
         id: 'compliance',
         title: 'Compliance',
+        image: complianceImage,
+        imageAlt: 'Ilustración editorial de un escudo y una lista de controles de cumplimiento.',
+        summary: 'Prevención de riesgos y fortalecimiento de controles.',
         description:
           'Sistemas de prevención y transparencia que generan confianza ante clientes, aliados y autoridades.',
         items: [
@@ -134,7 +133,7 @@ export const siteContent = {
           'Optimización de procesos',
         ],
         tags: ['SAGRILAFT', 'AUDITORÍA', 'CONFIANZA'],
-        visualLabel: '[IMAGEN RELACIONADA CON EL SERVICIO]',
+        visualLabel: 'Prevención, integridad y control',
       },
     ],
   },
@@ -142,23 +141,23 @@ export const siteContent = {
     eyebrow: 'Cómo trabajamos',
     title: 'Del diagnóstico a la operación responsable.',
     description:
-      'Un proceso claro, con un solo equipo a su lado de principio a fin. Usted sabe siempre en qué punto está su proyecto.',
+      'Acordamos el alcance, las prioridades y la forma de seguimiento para que conozca los avances y las decisiones de cada etapa.',
     steps: [
       {
         title: 'Diagnóstico',
-        description: 'Escuchamos su caso y evaluamos la situación legal, técnica y ambiental de su proyecto.',
+        description: 'Revisamos los antecedentes disponibles y entendemos el contexto jurídico, técnico y ambiental del proyecto.',
       },
       {
         title: 'Estrategia',
-        description: 'Definimos una ruta clara, con prioridades, tiempos y riesgos identificados.',
+        description: 'Priorizamos acciones, plazos y riesgos de acuerdo con los objetivos y el alcance acordado.',
       },
       {
         title: 'Gestión',
-        description: 'Radicamos, tramitamos y le representamos ante las autoridades competentes.',
+        description: 'Adelantamos las gestiones y la representación ante las autoridades que correspondan al caso.',
       },
       {
         title: 'Acompañamiento',
-        description: 'Seguimos a su lado en la operación, el cumplimiento y la relación con el entorno.',
+        description: 'Revisamos avances y compromisos, y ajustamos la ruta cuando cambian las condiciones del proyecto.',
       },
     ],
   },
@@ -166,23 +165,23 @@ export const siteContent = {
     eyebrow: 'Nuestro diferencial',
     title: 'Conocemos el territorio porque trabajamos en él.',
     description:
-      'Derecho minero-ambiental, estrategia corporativa, compliance y presencia en campo. Escuchamos a las comunidades y a los mineros del Chocó para construir soluciones que funcionan en la realidad, no solo en el papel.',
+      'Integramos derecho minero-ambiental, estrategia corporativa y compliance con una lectura cercana del contexto social, ambiental y productivo del Chocó.',
   },
   audience: {
     eyebrow: 'A quién acompañamos',
-    title: 'Si su operación está regulada, podemos ayudarle.',
+    title: 'Asesoría para organizaciones con retos mineros y regulatorios.',
     items: [
       {
-        title: 'EMPRESAS MINERAS Y TITULARES',
-        description: 'Operadores de proyectos extractivos, empresas junior y en exploración.',
+        title: 'TITULARES Y OPERADORES MINEROS',
+        description: 'Acompañamiento para proyectos en exploración, desarrollo u operación, según su situación jurídica y ambiental.',
       },
       {
-        title: 'ORGANIZACIONES E INSTITUCIONES',
-        description: 'Gremios, asociaciones, entes reguladores y descentralizados.',
+        title: 'GREMIOS Y ASOCIACIONES',
+        description: 'Orientación jurídica y minero-ambiental para organizaciones que representan intereses colectivos.',
       },
       {
-        title: 'CORPORACIONES Y OPERADORES',
-        description: 'Empresas con divisiones minero-ambientales y operaciones reguladas.',
+        title: 'ENTIDADES Y EMPRESAS',
+        description: 'Apoyo a entidades y compañías con operaciones reguladas o necesidades de gestión corporativa y compliance.',
       },
     ],
   },
@@ -191,48 +190,50 @@ export const siteContent = {
     title: 'Resolvemos sus dudas antes de empezar.',
     items: [
       {
-        question: 'Mi actividad minera aún es informal ¿Pueden ayudarme?',
-        answer: 'Sí. Acompañamos la regularización de la actividad minera desde el diagnóstico inicial hasta la operación responsable, incluyendo la recuperación de las áreas intervenidas.',
+        question: 'Mi actividad minera aún es informal. ¿Pueden orientarme?',
+        answer: 'Podemos revisar la situación y la documentación disponible para identificar alternativas de formalización y las gestiones que podrían corresponder. La ruta depende de las condiciones de cada caso.',
       },
       {
         question: '¿Trabajan solo con grandes empresas?',
-        answer: 'No. Acompañamos a titulares mineros, empresas junior y en exploración, gremios, asociaciones y corporaciones con divisiones minero-ambientales. Cada caso se atiende según su realidad.',
+        answer: 'No. Atendemos consultas de titulares y operadores mineros, empresas, gremios y asociaciones. El alcance se acuerda de acuerdo con las necesidades de cada organización.',
       },
       {
         question: '¿Qué pasa en la primera consulta estratégica?',
-        answer: 'Escuchamos su situación, revisamos la documentación disponible y le explicamos con claridad los riesgos, las opciones y la ruta recomendada para su proyecto.',
+        answer: 'Conversamos sobre sus objetivos, revisamos la información que tenga disponible y delimitamos los temas que requieren análisis. Luego podemos acordar el alcance de una asesoría.',
       },
       {
         question: '¿Cómo manejan las relaciones con las comunidades?',
-        answer: 'Integramos la relación con el entorno social en la estrategia desde el inicio, con respeto, diálogo y un enfoque de sostenibilidad que protege la operación y el territorio.',
+        answer: 'Consideramos el contexto social y la comunicación con las comunidades como parte del análisis del proyecto, con respeto por las personas y las particularidades del territorio.',
       },
     ],
   },
   contact: {
     eyebrow: 'Contacto',
-    title: 'Cuéntenos su situación. Le respondemos personalmente.',
+    title: 'Conversemos sobre su proyecto.',
     description:
-      'Un especialista revisará su solicitud y le contactará para agendar una consulta estratégica. Sin compromiso y con total confidencialidad.',
+      'Comparta el motivo de su consulta y prepare el mensaje para WhatsApp. Antes de enviarlo, podrá revisar la información desde su cuenta.',
     phoneLabel: 'WhatsApp / Teléfono',
-    phone: '3137819046',
+    phone: '+57 313 781 9046',
     emailLabel: 'Correo electrónico',
     email: 'jhonjameshurtadobussines@gmail.com',
     locationLabel: 'Ubicación',
-    location: 'Chocó Colombia',
+    location: 'Chocó, Colombia',
     form: {
       name: 'Nombre completo',
       phone: 'Teléfono / WhatsApp',
       email: 'Correo electrónico',
       service: '¿En qué podemos ayudarte?',
       message: 'Mensaje',
-      submit: 'Validar formulario',
-      servicePlaceholder: 'Selecciona un tema',
-      messagePlaceholder: 'Cuéntenos brevemente su situación',
+      submit: 'Continuar por WhatsApp',
+      servicePlaceholder: 'Seleccione un tema',
+      messagePlaceholder: 'Describa brevemente su consulta',
       submissionNotice:
-        'Cuéntenos su situación. Le respondemos personalmente.',
-      notSent:
-        'El formulario no está conectado; tus datos no se han enviado. Configura primero un canal oficial de recepción.',
-      privacyNote: 'Sus datos se tratan de forma confidencial.',
+        'Se abrirá WhatsApp con el mensaje preparado. Revíselo y pulse Enviar; el sitio no lo envía automáticamente.',
+      whatsappReady: 'WhatsApp se abrió con el mensaje preparado. Revíselo y pulse Enviar.',
+      popupBlocked: 'El navegador bloqueó la ventana. Use el enlace que aparece abajo para abrir WhatsApp.',
+      openWhatsApp: 'Abrir chat de WhatsApp',
+      missingService: 'Seleccione el servicio sobre el que desea consultar.',
+      privacyNote: 'La información que incluya se compartirá con WhatsApp cuando decida enviar el mensaje.',
     },
   },
 }

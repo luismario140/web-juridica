@@ -1,7 +1,8 @@
 import './WhatsAppFloat.css'
+import { siteContent } from '../../data/siteContent.js'
 
 function WhatsAppFloat() {
-  const phone = '3137819046'
+  const phone = siteContent.contact.phone.replace(/\D/g, '')
   const message = encodeURIComponent('Hola, me gustaría agendar una consulta.')
   const href = `https://wa.me/${phone}?text=${message}`
 

@@ -34,15 +34,6 @@ function Home() {
               {siteContent.hero.secondaryAction}
             </Link>
           </div>
-          <div className="landing-indicators" aria-label="Indicadores por confirmar">
-            {siteContent.indicators.map((indicator, index) => (
-              <div className="landing-indicator" key={indicator.label}>
-                <span className="landing-indicator__value">{indicator.value}</span>
-                <span className="landing-indicator__label">{indicator.label}</span>
-                <span className="landing-indicator__index" aria-hidden="true">0{index + 1}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         <HeroPortraitCarousel
@@ -68,7 +59,7 @@ function Home() {
               <Link className="landing-preview-card" key={service.id} to="/servicios">
                 <span className="landing-preview-card__number">0{index + 1}</span>
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                <p>{service.summary}</p>
                 <span className="landing-preview-card__link">Conocer más <ArrowIcon /></span>
               </Link>
             ))}
@@ -76,10 +67,6 @@ function Home() {
         </div>
       </section>
 
-      <div className="landing-home-cta">
-        <p>¿Tienes una consulta?</p>
-        <Link to="/contacto">Conversemos <ArrowIcon /></Link>
-      </div>
     </main>
   )
 }

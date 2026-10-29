@@ -7,7 +7,7 @@ function Faq() {
     <EditorialPage
       eyebrow={siteContent.faq.eyebrow}
       title={siteContent.faq.title}
-      description="[Respuestas provisionales: revisar y completar antes de publicar.]"
+      description="Resuelve tus dudas encuentra respuestas más frecuentes sobre nuestros servicios."
     >
       <section className="editorial-section editorial-faq" aria-label="Preguntas y respuestas">
         {siteContent.faq.items.map((item, index) => (
