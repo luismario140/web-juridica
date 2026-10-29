@@ -56,7 +56,7 @@
   line-height: 1;
   white-space: nowrap;
   pointer-events: none;
-  animation: whatsapp-bubble-in 500ms 700ms both;
+  animation: whatsapp-bubble-cycle 5s ease-in-out infinite;
 }
 
 .whatsapp-float__bubble::after {
@@ -81,16 +81,26 @@
   box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.14);
 }
 
-@keyframes whatsapp-bubble-in {
-  from {
+@keyframes whatsapp-bubble-cycle {
+  0%,
+  8%,
+  100% {
     opacity: 0;
-    transform: translateX(0.35rem) scale(0.96);
+    transform: translateX(0.4rem) scale(0.96);
   }
 
-  to {
+  16%,
+  72% {
     opacity: 1;
     transform: translateX(0) scale(1);
   }
+}
+
+.whatsapp-float:hover .whatsapp-float__bubble,
+.whatsapp-float:focus-visible .whatsapp-float__bubble {
+  animation-play-state: paused;
+  opacity: 1;
+  transform: translateX(0) scale(1);
 }
 
 @keyframes whatsapp-pulse {
@@ -116,5 +126,7 @@
 
   .whatsapp-float__bubble {
     animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

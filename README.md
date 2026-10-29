@@ -84,7 +84,7 @@ El carrusel 3D está en `src/components/HeroPortraitCarousel/`. Usa las fotograf
 
 La composición fotográfica de la página Territorio está en `src/pages/Territory/Territory.jsx` y sus estilos en `src/pages/Territory/Territory.css`. Las dos imágenes se importan desde `src/assets/imgterrito/`; para sustituirlas, cambia esos imports y actualiza sus textos alternativos y pies de foto. El difuminado de los bordes se aplica con gradientes visibles hacia el fondo de la página, y la animación flotante respeta la preferencia de movimiento reducido.
 
-Las tarjetas de principios en “Nosotros” tienen una elevación automática escalonada, desactivada para usuarios que prefieren movimiento reducido. El acceso flotante de WhatsApp se encuentra en `src/components/WhatsAppFloat/` y muestra una burbuja “¿Hablamos?” junto al icono.
+Las tarjetas de principios en “Nosotros” tienen un pulso con rebote suave y escalonado cuando entran en pantalla; se desactiva para usuarios que prefieren movimiento reducido. El acceso flotante de WhatsApp se encuentra en `src/components/WhatsAppFloat/` y alterna la burbuja “¿Hablamos?” junto al icono; al pasar el cursor o enfocarlo, permanece visible.
 
 Las rutas de páginas se cargan de forma diferida desde `src/App.jsx`; así el navegador descarga cada página cuando se visita. Las fotos y los logos usados por la web tienen versiones WebP optimizadas; los originales se conservan. Las imágenes fuera de pantalla usan carga diferida y, al cambiar de ruta, la página sube al inicio de inmediato.
 

@@ -96,17 +96,16 @@ function About() {
             <motion.article
               className="editorial-card"
               key={principle.id}
-              initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 14 }}
-              whileInView={{
-                opacity: 1,
-                y: shouldReduceMotion ? 0 : [0, -5, 0],
+              whileInView={shouldReduceMotion ? undefined : {
+                y: [0, -5, 0],
+                scale: [1, 1.012, 1],
               }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{
-                duration: shouldReduceMotion ? 0.35 : 3.2,
+                duration: 2.6,
                 delay: shouldReduceMotion ? 0 : index * 0.42,
                 repeat: shouldReduceMotion ? 0 : Infinity,
-                ease: 'easeInOut',
+                ease: [0.34, 1.56, 0.64, 1],
               }}
             >
               <span className="editorial-card__number">0{index + 1}</span>
